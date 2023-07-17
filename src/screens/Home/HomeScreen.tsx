@@ -39,7 +39,7 @@ const HomeScreen = ({navigation}: any) => {
       const data = await response.json();
       setWeatherData(data);
       if (data.name) {
-        setLocationName(data.name); // Konumunuzun adını ayarlayın
+        setLocationName(data.name)
       }
     } catch (error) {
       console.error('Hava durumu alınırken bir hata oluştu:', error);
@@ -73,12 +73,11 @@ const HomeScreen = ({navigation}: any) => {
         });
       },
       error => console.error('Konum alınamadı:', error),
-      // {enableHighAccuracy: true, timeout: 20000, maximumAge: 10000},
     );
   };
 
   useEffect(() => {
-    // Sayfa yüklendiğinde konum izni iste
+    // Sayfa yüklendiğinde konum izni 
     requestLocationPermission();
   }, []);
 
@@ -94,9 +93,9 @@ const HomeScreen = ({navigation}: any) => {
     const currentDateObj = new Date();
     const options: Intl.DateTimeFormatOptions = {
       year: 'numeric',
-      month: 'long', // Ay ismi (örn. Ocak)
+      month: 'long', // Ay ismi
       day: 'numeric',
-      weekday: 'long', // Gün ismi (örn. Pazartesi)
+      weekday: 'long', // Gün ismi
     };
     setCurrentDate(currentDateObj.toLocaleDateString('tr-TR', options));
 
