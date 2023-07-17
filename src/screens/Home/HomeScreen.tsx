@@ -12,7 +12,7 @@ import { Setting } from '../Settings';
 import {useDispatch, useSelector} from 'react-redux';
 
 
-const HomeScreen = ({navigation}: any) => {
+const HomeScreen = () => {
 
   const color = useSelector( (state: any) => state.mod.backgroundColor )
 
