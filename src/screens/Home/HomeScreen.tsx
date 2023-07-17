@@ -29,7 +29,7 @@ const HomeScreen = ({navigation}: any) => {
 
     
 
-    const apiKey = 'ada87199e277eecf9ef4d2b1b6925ed1';
+    const apiKey = 'yourApiKey';
     if (!location) return;
 
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${location.latitude}&lon=${location.longitude}&appid=${apiKey}&units=metric`;
